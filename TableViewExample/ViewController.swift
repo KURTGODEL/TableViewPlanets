@@ -2,12 +2,15 @@
 //  ViewController.swift
 //  TableViewExample
 //
-//  Created by Student on 2020-02-21.
+//  Created by Erick Araujo on 2020-02-21.
 //  Copyright © 2020 Student. All rights reserved.
 //
 
 import UIKit
 
+/*
+ * ViewController for Main Page
+ */
 class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!;
@@ -53,7 +56,9 @@ class ViewController: UIViewController {
     }
 }
 
-
+/*
+ * ViewController for Planet Detail Screen
+ */
 class DetailViewController: UIViewController {
     var detailTitle:String = "";
     var detail:String = "";
@@ -76,7 +81,9 @@ class DetailViewController: UIViewController {
     }
 }
 
-
+/*
+* ViewController extension for Delegate actions
+*/
 extension ViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
@@ -88,6 +95,9 @@ extension ViewController: UITableViewDelegate{
     }
 }
 
+/*
+ * ViewController extension for DataSource operations
+ */
 extension ViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -111,6 +121,9 @@ extension ViewController: UITableViewDataSource {
     
 }
 
+/*
+ * Customize TableViewCell with new UI Elements
+ */
 class CustomTableViewCell: UITableViewCell {
     @IBOutlet weak var imageItem: UIImageView!
     @IBOutlet weak var txtLabelCustom: UILabel!;
